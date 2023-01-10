@@ -56,14 +56,6 @@ public final class CommodoreProvider {
             printDebugInfo(e);
         }
 
-        // try reflection impl
-        try {
-            ReflectionCommodore.ensureSetup();
-            return ReflectionCommodore::new;
-        } catch (Throwable e) {
-            printDebugInfo(e);
-        }
-
         return null;
     }
 
